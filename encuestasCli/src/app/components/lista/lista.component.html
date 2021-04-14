@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Encuestas</h3>
+
+        </div>  
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr style="text-align:center" >
+                        <th>Id</th>
+                        <th>Comentario</th>
+                        <th>Documento</th>
+                        <th>Email</th>
+                        <th>Fecha</th>
+                        <th>Marca</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let encuesta of encuestas"  style="text-align:center" >
+                        <td>{{encuesta.idEncuesta}}  </td>
+                        <td>{{encuesta.comentarios}}  </td>
+                        <td>{{encuesta.documento}}  </td>
+                        <td>{{encuesta.email}}  </td>
+                        <td>{{encuesta.fechaRespuesta}}  </td>
+                        <td>{{encuesta.marcaFavorita}} 
+                        </td>
+                        <td>  
+                          <button (click)="borrar(encuesta)" class="btn btn-danger"  style="font-size:12px; margin-left:10px; " >Borrar </button> 
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+

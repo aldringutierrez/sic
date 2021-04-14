@@ -1,0 +1,11 @@
+
+<div class="container">
+    <h1 *ngIf="token"  >Encuesta Marcas de Computadores</h1>
+    <button (click)="listar()" *ngIf="token" class="btn btn-info" style="font-size:12px; margin-left:10px;" >Consultar</button> 
+    <button (click)="nuevo()"  *ngIf="token" class="btn btn-info" style="font-size:12px; margin-left:10px;" >Agregar</button> 
+    <button (click)="login()"  *ngIf="!token" class="btn btn-success" style="font-size:12px; margin-left:10px;"  >Login</button>
+    <button (click)="logout()" *ngIf="token" class="btn btn-success" style="font-size:12px; margin-left:10px;" >Logout</button>
+</div>
+
+
+<router-outlet *ngIf="token"></router-outlet>
